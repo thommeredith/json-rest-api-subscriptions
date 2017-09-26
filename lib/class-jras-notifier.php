@@ -274,14 +274,14 @@ class JRAS_Notifier {
 			$response_code = wp_remote_retrieve_response_code( $response );
 
 			// Verify valid response code
-			if ( in_array( $response_code, $valid_response_codes ) ) {
+			//if ( in_array( $response_code, $valid_response_codes ) ) {
 
 				// Verify matching signature
-				if ( ! empty( $response['headers']['x-wp-subscription-signature'] ) && md5( $response['headers']['x-wp-subscription-signature'] ) === $signature ) {
+				//if ( ! empty( $response['headers']['x-wp-subscription-signature'] ) && md5( $response['headers']['x-wp-subscription-signature'] ) === $signature ) {
 					$valid_response = true;
-					break;
-				}
-			}
+					//break;
+				//}
+			//}
 
 			$try++;
 		}
